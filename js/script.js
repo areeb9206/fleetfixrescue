@@ -9,6 +9,8 @@ const menuBtn = document.querySelector('.menu-toggle');
   });
 
 
+
+  
   const track = document.querySelector('.testimonial-track');
   const cards = document.querySelectorAll('.testimonial-card');
   const prev = document.querySelector('.carousel-btn.prev');
@@ -19,6 +21,7 @@ const menuBtn = document.querySelector('.menu-toggle');
   let autoSlide;
   const gap = 40;
 
+  /* Helpers */
   function visibleCards() {
     return window.innerWidth <= 900 ? 1 : 2;
   }
@@ -49,6 +52,7 @@ const menuBtn = document.querySelector('.menu-toggle');
     updateCarousel();
   }
 
+  /* Buttons */
   next.addEventListener('click', () => {
     nextSlide();
     restartAutoSlide();
@@ -59,8 +63,9 @@ const menuBtn = document.querySelector('.menu-toggle');
     restartAutoSlide();
   });
 
+  /* Auto slide (desktop friendly speed) */
   function startAutoSlide() {
-    autoSlide = setInterval(nextSlide, 1000);
+    autoSlide = setInterval(nextSlide, 4000);
   }
 
   function stopAutoSlide() {
@@ -72,9 +77,42 @@ const menuBtn = document.querySelector('.menu-toggle');
     startAutoSlide();
   }
 
+  /* Pause on hover (desktop) */
   carousel.addEventListener('mouseenter', stopAutoSlide);
   carousel.addEventListener('mouseleave', startAutoSlide);
 
-  window.addEventListener('resize', updateCarousel);
+  /* =====================
+     TOUCH / SWIPE SUPPORT
+     ===================== */
+
+  let startX = 0;
+  let endX = 0;
+
+  carousel.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    stopAutoSlide();
+  });
+
+  carousel.addEventListener('touchmove', (e) => {
+    endX = e.touches[0].clientX;
+  });
+
+  carousel.addEventListener('touchend', () => {
+    const diff = startX - endX;
+
+    if (diff > 50) {
+      nextSlide(); // swipe left
+    } else if (diff < -50) {
+      prevSlide(); // swipe right
+    }
+
+    restartAutoSlide();
+  });
+
+  /* Resize fix */
+  window.addEventListener('resize', () => {
+    index = 0;
+    updateCarousel();
+  });
 
   startAutoSlide();
