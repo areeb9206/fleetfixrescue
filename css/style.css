@@ -484,7 +484,7 @@ a {
   }
 
   .logo img {
-    height: 150%;
+    height: 150px !important;
   }
 
   .hero {
@@ -548,6 +548,15 @@ a {
    ========================= */
 @media (max-width: 480px) {
 
+
+  .logo {
+    height:  100px;
+  }
+
+  .logo img {
+    height: 150px !important;
+  }
+
   .hero {
     height: 60vh;
   }
@@ -561,3 +570,230 @@ a {
     font-size: 14px;
   }
 }
+
+
+
+
+
+
+
+
+/* ABOUT PAGE CSS */
+/* =========================
+   ABOUT PAGE
+   ========================= */
+.about-hero {
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+.about-hero h1 {
+  font-size: 52px;
+  color: #fff;
+  max-width: 900px;
+  margin-bottom: 30px;
+}
+/* =========================
+   ABOUT PAGE – HOME THEME
+   ========================= */
+
+   .about-page {
+    padding: 80px 0;
+    background: #fff;
+  }
+  
+  /* Headings like home page */
+  .about-title {
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color: #000;
+    margin-top: 50px;
+    /* margin: 60px 0 25px; */
+    text-align: center;
+  }
+  
+  /* underline under heading */
+  /* .about-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 70px;
+    height: 4px;
+    background: var(--primary);
+    border-radius: 4px;
+    text-align: center;
+  } */
+  
+  /* text */
+  .about-page p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #444;
+    margin-bottom: 18px;
+  }
+  
+  /* intro paragraph */
+  .about-intro {
+    font-size: 18px;
+    font-weight: 500;
+    color: #222;
+    margin-bottom: 40px;
+  }
+  
+  .about-intro .brand {
+    color: var(--primary);
+    font-weight: 700;
+  }
+  
+  /* bullet list */
+  .about-list {
+    margin: 20px 0 35px 20px;
+  }
+  
+  .about-list li {
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #444;
+  }
+  
+  /* highlight promise */
+  .about-highlight {
+    margin-top: 45px;
+    padding: 20px 25px;
+    border-left: 5px solid var(--primary);
+    background: #f8f8f8;
+    font-size: 17px;
+    font-weight: 600;
+    color: #222;
+  }
+  
+  /* =========================
+     MOBILE VIEW
+     ========================= */
+  @media (max-width: 900px) {
+  
+    .about-page {
+      padding: 45px 0;
+    }
+  
+    .about-title {
+      font-size: 26px;
+    }
+  
+    .about-title::after {
+      width: 55px;
+    }
+  
+    .about-page p,
+    .about-list li {
+      font-size: 15px;
+    }
+  
+    .about-intro {
+      font-size: 16px;
+    }
+  }
+  
+
+
+  /* =========================
+   Contact PAGE
+   ========================= */
+
+   .contact-section {
+    padding: 80px 10%;
+    background: var(--white);
+  }
+  
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+  
+  .contact-info h2,
+  .contact-form h2 {
+    color: var(--primary);
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .info-block {
+    margin-bottom: 20px;
+  }
+  
+  .info-block span {
+    display: block;
+    font-size: 12px;
+    color: var(--gray);
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+  }
+  
+  .info-block p {
+    font-size: 16px;
+    color: var(--text);
+  }
+  
+
+  
+  /* FORM */
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    border: none;
+    border-bottom: 1px solid var(--gray);
+    padding: 10px 0;
+    font-size: 15px;
+    outline: none;
+  }
+  
+  .contact-form textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  .contact-form button {
+    margin-top: 10px;
+    width: fit-content;
+    padding: 12px 30px;
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .contact-form button:hover {
+    background: var(--primary-dark);
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .contact-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
