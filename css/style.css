@@ -797,3 +797,65 @@ a {
     }
   }
   
+
+  /* =========================
+  Terms PAGE
+   ========================= */
+   .terms-page {
+    background: var(--light);
+    padding: 90px 20px;
+  }
+  
+  .terms-container {
+    max-width: 1000px;
+    margin: auto;
+    background: var(--white);
+    padding: 55px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  }
+  
+  .terms-container h1 {
+    color: var(--primary);
+    font-size: 34px;
+    margin-bottom: 8px;
+  }
+  
+  .terms-date {
+    font-size: 14px;
+    color: var(--gray);
+    margin-bottom: 25px;
+  }
+  
+  .terms-intro {
+    margin-bottom: 35px;
+  }
+  
+  .terms-section {
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .terms-section:last-child {
+    border-bottom: none;
+  }
+  
+  .terms-section h2 {
+    color: var(--primary-dark);
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  
+  .terms-section p {
+    margin-bottom: 10px;
+  }
+  
+  .terms-section ul {
+    padding-left: 22px;
+  }
+  
+  .terms-section ul li {
+    margin-bottom: 8px;
+  }
+  
