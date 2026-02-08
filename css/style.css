@@ -34,7 +34,7 @@ a {
    CONTAINER
    ========================= */
 .container {
-  width: 90%;
+  width: 95%;
   max-width: 1200px;
   margin: auto;
 }
@@ -470,6 +470,11 @@ a {
    ========================= */
 @media (max-width: 900px) {
 
+/* 
+  .nav-flex{
+    margin: 0px 20px;
+    
+  } */
   .desktop-nav,
   .phone-btn {
     display: none;
@@ -484,7 +489,7 @@ a {
   }
 
   .logo img {
-    height: 130px !important;
+    height: 120px !important;
   }
 
   .hero {
@@ -554,7 +559,7 @@ a {
   }
 
   .logo img {
-    height: 130px !important;
+    height: 120px !important;
   }
 
   .hero {
