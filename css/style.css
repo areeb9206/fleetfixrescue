@@ -484,7 +484,7 @@ a {
   }
 
   .logo img {
-    height: 150px !important;
+    height: 130px !important;
   }
 
   .hero {
@@ -554,7 +554,7 @@ a {
   }
 
   .logo img {
-    height: 150px !important;
+    height: 130px !important;
   }
 
   .hero {
@@ -796,6 +796,63 @@ a {
       grid-template-columns: 1fr;
     }
   }
+  @media (max-width: 768px) {
+
+    .contact-section {
+      padding: 60px 6%;
+    }
+  
+    .contact-container {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  
+    .contact-info h2,
+    .contact-form h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  
+    .info-block p {
+      font-size: 15px;
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 14px;
+    }
+  
+    .contact-form button {
+      width: 100%;
+      text-align: center;
+      padding: 14px 0;
+    }
+  }
+  
+  /* Extra small devices */
+  @media (max-width: 480px) {
+  
+    .contact-section {
+      padding: 50px 5%;
+    }
+  
+    .contact-info h2,
+    .contact-form h2 {
+      font-size: 22px;
+    }
+  
+    .info-block span {
+      font-size: 11px;
+    }
+  
+    .info-block p {
+      font-size: 14px;
+    }
+  
+    .contact-form textarea {
+      height: 90px;
+    }
+  }
   
 
   /* =========================
@@ -803,7 +860,7 @@ a {
    ========================= */
    .terms-page {
     background: var(--light);
-    padding: 90px 20px;
+    padding: 40px 10px;
   }
   
   .terms-container {
@@ -859,3 +916,75 @@ a {
     margin-bottom: 8px;
   }
   
+
+  /* =========================
+   Terms PAGE – Responsive
+========================= */
+
+@media (max-width: 1024px) {
+  .terms-container {
+    padding: 45px 35px;
+  }
+
+  .terms-container h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .terms-page {
+    padding: 70px 15px;
+  }
+
+  .terms-container {
+    padding: 35px 25px;
+    border-radius: 10px;
+  }
+
+  .terms-container h1 {
+    font-size: 26px;
+  }
+
+  .terms-section h2 {
+    font-size: 18px;
+  }
+
+  .terms-intro {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .terms-page {
+    padding: 30px 10px;
+  }
+
+  .terms-container {
+    padding: 28px 18px;
+  }
+
+  .terms-container h1 {
+    font-size: 22px;
+  }
+
+  .terms-date {
+    font-size: 13px;
+  }
+
+  .terms-section {
+    margin-bottom: 25px;
+    padding-bottom: 18px;
+  }
+
+  .terms-section h2 {
+    font-size: 17px;
+  }
+
+  .terms-section ul {
+    padding-left: 18px;
+  }
+
+  .terms-section ul li {
+    margin-bottom: 6px;
+  }
+}
